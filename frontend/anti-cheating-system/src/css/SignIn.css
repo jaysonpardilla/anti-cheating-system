@@ -1,0 +1,172 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.error-text {
+  position: absolute;            /* fixed on top */
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff4d4f;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  z-index: 1000;                /* stay above other content */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.signin-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.spinner-icon {
+  font-size: 18px;   /* adjust size if needed */
+}
+
+.left-panel {
+  flex: 0.8;
+  background: #0c1885;
+  background: linear-gradient(90deg,rgba(12, 24, 133, 1) 0%, rgba(21, 50, 176, 1) 39%, rgba(76, 125, 217, 1) 77%, rgba(125, 203, 255, 1) 100%);
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header at top-left */
+.headers {
+  display: flex;
+  align-items: left;
+  gap: 10px;
+  margin-bottom: auto; /* push welcome-content down */
+}
+
+/* Center the welcome-content vertically & horizontally */
+.welcome-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* center horizontally */
+  justify-content: center; /* center vertically */
+  text-align: center;      /* center text */
+}
+
+/* .logo-circle {
+  width: 50px;
+  height: 50px;
+  background: #a40138;
+  border-radius: 50%;
+} */
+
+.logo-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;      /* keeps it circular */
+  object-fit: cover;      /* ensures it covers the circle area */
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.welcome-text {
+  font-size: 32px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 16px;
+  max-width: 300px;
+  line-height: 1.4;
+}
+
+
+
+
+
+.right-panel {
+  flex: 1.2;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;    /* center vertically */
+  align-items: center;  
+  background-color: rgb(241, 241, 241);     /* center horizontally */
+}
+
+.form-title {
+  font-size: 28px;
+  margin-bottom: 50px;
+  text-align: center;        /* center text inside */
+  width: 100%;               /* let it be full width */
+}
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;               /* take full width of parent */
+  max-width: 400px;          /* but don’t stretch too far */
+}
+
+.signin-form label {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #333;
+  width: 100%;              /* keep label same width as inputs */
+  max-width: 100%;          /* safe guard */
+  text-align: left;
+}
+
+.signin-form input[type="text"],
+.signin-form input[type="password"] {
+  width: 100%;              /* fill the form width */
+  padding: 10px;
+  margin-top: 3px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.remember-me {
+  width: 100%;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;  /* adds a small space between checkbox and text */
+}
+
+.remember-me label {
+  display: inline;
+  margin: 0;
+}
+
+.remember-me input {
+  margin: 0;  /* remove extra margin if it was there */
+}
+
+
+.signin-button {
+  width: 100%;              /* same width as inputs */
+  padding: 12px;
+  background: #2a5ed9;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.signup-text {
+  margin-top: 15px;
+  font-size: 14px;
+  text-align: center;       /* center the signup text */
+}

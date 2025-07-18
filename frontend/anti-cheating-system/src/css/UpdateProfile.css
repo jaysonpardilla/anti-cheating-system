@@ -1,0 +1,234 @@
+/* Profile container layout */
+.profile-container {
+  display: flex;
+  flex: 1;
+  min-height: calc(100vh - 60px); /* adjust header height if needed */
+  overflow-x: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  background: linear-gradient(to bottom, #666, #aaa);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.sidebar-logo {
+  width: 60px;
+  margin-bottom: 5px;
+}
+
+.sidebar-title {
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.proctor {
+  font-size: 15px;
+}
+
+.subject {
+  font-size: 15px;
+}
+
+.sidebar-menu {
+  width: 100%;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: #e0e0e0;
+  cursor: pointer;
+}
+
+.sidebar-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-item svg {
+  margin-right: 10px;
+}
+
+/* Header */
+.header {
+  background-color: #2b1a77;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.header .titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.header .profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 40px;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: rgb(230, 230, 230);
+  min-width: 120px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  border: 1px solid #000000;
+  z-index: 1;
+  color: #f1f1f1;
+  border-radius: 5px;
+}
+
+.dropdown-content button {
+  width: 100%;
+  padding: 8px;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content button:hover {
+  background-color: #0400ff;
+  color: #f9f9f9;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Profile card container */
+.profile-card {
+  margin: auto;
+  margin-top: 70px;
+  padding: 30px;
+  border: 1px solid #202020;
+  border-radius: 8px;
+  width: 700px;
+  background-color: #f9f9f9;
+  text-align: left;
+  box-shadow: 0px 1px 10px 0px rgb(159, 159, 159);
+}
+
+/* Top center in profile card */
+.profile-card .top-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.profile-card .top-center img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 16px;
+  border: 3px solid #2e0171;
+  box-shadow: 0 1 5px rgba(49, 49, 49, 0.894);
+}
+
+.profile-card .top-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100px;
+}
+
+.profile-card .top-info h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.profile-card .top-info .role {
+  font-size: 14px;
+  color: #555;
+  margin: 4px 0;
+}
+
+/* Update button */
+.update-btn {
+  margin-top: 5px;
+  padding: 4px 8px;
+  background-color: #29297d;
+  color: rgb(241, 241, 241);
+  font-size: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.update-btn svg {
+  margin-right: 4px;
+}
+
+/* Update form inside profile-card */
+.update-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.update-form input[type="text"],
+.update-form input[type="file"] {
+  margin-bottom: 12px;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.update-form input[type="text"]:focus,
+.update-form input[type="file"]:focus {
+  outline: none;
+  border-color: #2e0171;
+  box-shadow: 0 0 3px rgba(46, 1, 113, 0.5);
+}
+
+/* Larger title for update form */
+.profile-card h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #2e0171;
+}
+
+.update-form .update-btn {
+  width: 200px;           /* adjust this to match input width visually */
+  justify-content: center;
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+  align-items: center;
+}
+
+body, html {
+  overflow-x: hidden;
+}
